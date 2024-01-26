@@ -1,0 +1,30 @@
+@import url('https://fonts.cdnfonts.com/css/tt-commons?styles=87752,87745');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "TT Commons", sans-serif; 
+  color: #FFFFFF;
+}
+.content {
+  background-color: #4b4b4b;
+  min-height: 100vh;
+  width: 100%; 
+  display: flex; 
+  flex-direction: column; 
+  flex-wrap: wrap;
+}
+.tittle{  
+  display: flex;
+  margin: 5rem;
+}
+.paragraph{ 
+  margin: 5rem; 
+  display: flex;
+} 
+.paragraph h1{ 
+  // font-size: 6rem;  
+  font-size: clamp(3rem, 6vw, 6rem);
+  font-weight: 600;
+}
+

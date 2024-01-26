@@ -1,0 +1,22 @@
+[ 
+    { 
+        "name": "Git", 
+        "level" : "basic",
+        "img" : "assets\\imgs\\git.png"
+    },
+    { 
+        "name": "GitHub", 
+        "level" : "basic",
+        "img" : "assets\\imgs\\github.png"
+    },
+    { 
+        "name": "SQLServer", 
+        "level" : "basic",
+        "img" : "assets\\imgs\\sql-server.png"
+    },
+    { 
+        "name": "PostgreeSQL", 
+        "level" : "basic",
+        "img" : "assets\\imgs\\postgree.png"
+    }
+]

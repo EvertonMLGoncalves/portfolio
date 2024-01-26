@@ -1,0 +1,23 @@
+*{ 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+} 
+.teste {
+    display: flex;
+    flex-direction: column;
+}
+first-page{ 
+    display: flex; 
+    flex-direction: column; 
+    
+   
+} 
+works{ 
+    background-color: #000000; 
+    padding: 0; 
+    margin: 0;
+    box-sizing: border-box; 
+    width: 100%;
+    min-height: 100vh;
+}

@@ -1,0 +1,23 @@
+[ 
+    { 
+        "name": "Python", 
+        "level" : "basic",
+        "img" : "assets\\imgs\\python.png"
+    },
+    { 
+        "name": ".NET", 
+        "level" : "advanced",
+        "img" : "assets\\imgs\\Csharp.png"
+    },
+    { 
+        "name": "ASP.NET core", 
+        "level" : "intermediary",
+        "img" : "assets\\imgs\\Csharp.png"
+    },
+    { 
+        "name": "Entity Framework core", 
+        "level" : "intermediary",
+        "img" : "assets\\imgs\\Csharp.png"
+    }
+    
+]

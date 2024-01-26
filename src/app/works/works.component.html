@@ -1,0 +1,30 @@
+<h1 style="color: #7ed957;">My Works</h1> 
+<div class="works"> 
+    <div class="back">
+        <button
+        class="back-btn"
+        (click)="getBackEndProjects()"
+        ><h2>Back-End</h2></button>
+    </div> 
+    <div class="front"> 
+        <button
+        class="front-btn"
+        (click)="getFronEndProjects()"
+        ><h2>Front-End</h2></button>
+    </div> 
+    <div class="full-stack"> 
+        <button
+        class="full-btn"
+        ><h2>Full-Stack</h2></button>
+    </div> 
+</div> 
+<div class="cards"> 
+    <div class="card" *ngFor="let card of displayedProjects" style="width: 18rem;">
+        <img src="{{card.img}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{card.name}}</h5>
+          <p class="card-text">{{card.description}}</p>
+          <a href="{{card.link}}" class="btn btn-primary">Go to Project</a>
+        </div>
+      </div>
+</div>
