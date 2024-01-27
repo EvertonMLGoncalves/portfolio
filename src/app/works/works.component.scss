@@ -53,4 +53,29 @@ h1{
     flex-wrap: wrap;    
     justify-content: center; 
     gap: 40px;
+} 
+.card{ 
+    background-color: #4b4b4b; 
+    color: #FFFFFF;
+}
+.card-body a { 
+    background-color: #bbed2f;
+    text-decoration: none; 
+    color: #000000;  
+    padding: 10px 25px; 
+    border-radius: 50px;
+} 
+.card-body a:hover{ 
+    cursor: pointer; 
+    background-color: #D2FF33;
+}
+.card-icons{ 
+    display: flex; 
+    gap: 10px; 
+    margin-top: 20px;
+} 
+.card-icons img{ 
+    width: 2.2rem; 
+    height: 2.2rem; 
+    ;
 }

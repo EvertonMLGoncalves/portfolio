@@ -1,30 +1,39 @@
-[ 
-    { 
-        "name" : "ClinicAPI",
-        "description" : "An API for the management of appointments, doctors, and patients.",
-        "img" : "",
-        "link" : "https://github.com/EvertonMLGoncalves/APIConsultorio",
-        "stacks" : ["backend"]
-    },
-    { 
-        "name" : "AliensAPI",
-        "description" : "An API for the control of entry and exit of aliens with email notifications.",
-        "img" : "",
-        "link": "https://github.com/EvertonMLGoncalves/Aliens_API",
-        "stacks" : ["backend"]
-    },
-    { 
-        "name" : "+GreenBack-End",
-        "description" : "Back-end of the final project for the +Devs2Blu 2023 program with various functionalities.",
-        "img" : "",
-        "link" : "https://github.com/TechTitans-MeioAmbiente/green/blob/main/BackEnd/back-end.md",
-        "stacks" : ["backend"]
-    },
-    { 
-        "name" : "CRUD-Employee",
-        "description" : "A simple-crud developed using angular and angular material",
-        "img" : "",
-        "link" : "https://github.com/EvertonMLGoncalves/CRUD-Employee",
-        "stacks" : ["frontend"]
-    }
+[
+  {
+    "name": "ClinicAPI",
+    "description": "An API for the management of appointments, doctors, and patients.",
+    "img": "assets\\jsons-imgs\\clinic.jpg",
+    "link": "https://github.com/EvertonMLGoncalves/APIConsultorio",
+    "stacks": ["backend"],
+    "icons": ["assets\\imgs\\Csharp.png", "assets\\imgs\\sql-server.png"]
+  },
+  {
+    "name": "AliensAPI",
+    "description": "An API for the control of entry and exit of aliens with email notifications.",
+    "img": "assets\\jsons-imgs\\aliens.jpg",
+    "link": "https://github.com/EvertonMLGoncalves/Aliens_API",
+    "stacks": ["backend"],
+    "icons": ["assets\\imgs\\Csharp.png", "assets\\imgs\\sql-server.png"]
+  },
+  {
+    "name": "+GreenBack-End",
+    "description": "Back-end of the final project for the +Devs2Blu 2023 program.",
+    "img": "assets\\jsons-imgs\\+green.jpg",
+    "link": "https://github.com/TechTitans-MeioAmbiente/green/blob/main/BackEnd/back-end.md",
+    "stacks": ["backend"],
+    "icons": ["assets\\imgs\\Csharp.png", "assets\\imgs\\sql-server.png"]
+  },
+  {
+    "name": "CRUD-Employee",
+    "description": "A simple-crud developed using angular and angular material",
+    "img": "assets\\jsons-imgs\\employee.jpg",
+    "link": "https://github.com/EvertonMLGoncalves/CRUD-Employee",
+    "stacks": ["frontend"],
+    "icons": [
+      "assets\\imgs\\angular.png",
+      "assets\\imgs\\typescript.png",
+      "assets\\imgs\\html.png",
+      "assets\\imgs\\css.png"
+    ]
+  }
 ]
