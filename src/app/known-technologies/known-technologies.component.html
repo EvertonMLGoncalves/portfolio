@@ -1,27 +1,31 @@
-<div class="main"> 
-    <div class="tittle">
-        <h1>Known technologies</h1>
-    </div> 
-    <div class="content"> 
+<div class="main">
+  <div class="tittle">
+    <h1 [ngClass]="{'h-animation' : isVisible == true}">Known technologies</h1>
+  </div>
+  <div class="content">
     <div class="backend">
-        <h1>Back-end</h1> 
-        <ul> 
-            <li *ngFor="let data of backendData"><img src="{{data.img}}" alt=""> {{data.name}} ({{data.level}})</li>
-        </ul>
-    </div> 
-    <div class="frontend">
-        <h1>Front-end</h1> 
-        <ul> 
-            <li *ngFor="let data of FrontendData"><img src="{{data.img}}" alt=""> {{data.name}} ({{data.level}})</li>
-        </ul>
-    </div> 
+      <h1 class="content-h1" [ngClass]="{'h-animation' : isVisible == true}">Back-end</h1>
+      <ul>
+        <li *ngFor="let data of backendData" [ngClass]="{'l-animation' : isVisible == true}">
+          <img src="{{ data.img }}" alt="" /> {{ data.name }} ({{ data.level }})
+        </li>
+      </ul>
+    </div>
+    <div class="frontend"> 
+      <h1 class="content-h1" [ngClass]="{'h-animation' : isVisible == true}">Front-end</h1>
+      <ul>
+        <li *ngFor="let data of FrontendData"  [ngClass]="{'l-animation' : isVisible == true}">
+          <img src="{{ data.img }}" alt="" /> {{ data.name }} ({{ data.level }})
+        </li>
+      </ul>
+    </div>
     <div class="utilitaries">
-        <h1>Utilitaries</h1> 
-        <ul> 
-            <li *ngFor="let data of UtilitariesData"> 
-                <img src="{{data.img}}" alt=""> {{data.name}} ({{data.level}})
-            </li>
-        </ul>
+      <h1 class="content-h1" [ngClass]="{'h-animation' : isVisible == true}">Utilitaries</h1>
+      <ul>
+        <li *ngFor="let data of UtilitariesData" [ngClass]="{'l-animation' : isVisible == true}">
+          <img src="{{ data.img }}" alt="" /> {{ data.name }} ({{ data.level }})
+        </li>
+      </ul>
     </div>
-    </div>
+  </div>
 </div>

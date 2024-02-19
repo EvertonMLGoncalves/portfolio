@@ -35,7 +35,7 @@
   flex-direction: column;
   flex-wrap: wrap;
 }
-.text-div {
+.text-div-animation {
   -webkit-animation: slide-in-left 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
     both;
   animation: slide-in-left 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
@@ -63,6 +63,9 @@
   aspect-ratio: 16/9;
   object-fit: cover;
   clip-path: circle();
+  
+} 
+.my-photo-animation{  
   -webkit-animation: slide-in-fwd-center 3s ease-out both;
   animation: slide-in-fwd-center 2s ease-out both;
 }
@@ -81,6 +84,9 @@
   justify-content: space-between;
   align-items: center;
   border: none;
+  
+} 
+.custom-btn-animation{ 
   -webkit-animation: slide-in-left 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s both;
   animation: slide-in-left 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s both;
 }

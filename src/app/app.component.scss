@@ -20,4 +20,10 @@ works{
     box-sizing: border-box; 
     width: 100%;
     min-height: 100vh;
+} 
+.hidden{ 
+    opacity: 0;
 }
+.show{ 
+    opacity: 1;
+} 

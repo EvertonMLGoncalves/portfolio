@@ -1,25 +1,29 @@
 <h1 style="color: #7ed957;">My Works</h1> 
-<div class="works"> 
+<div class="works">  
+    
     <div class="back">
         <button
-        class="back-btn"
+        class="back-btn custom-btn"
         (click)="getBackEndProjects()"
+        [ngClass]="{'custom-btn-animation' : isVisible == true}"
         ><h2>Back-End</h2></button>
     </div> 
     <div class="front"> 
         <button
-        class="front-btn"
+        class="front-btn custom-btn"
         (click)="getFronEndProjects()"
+        [ngClass]="{'custom-btn-animation' : isVisible == true}"
         ><h2>Front-End</h2></button>
     </div> 
     <div class="full-stack"> 
         <button
-        class="full-btn"
+        class="full-btn custom-btn"
+        [ngClass]="{'custom-btn-animation' : isVisible == true}"
         ><h2>Full-Stack</h2></button>
     </div> 
 </div> 
 <div class="cards"> 
-    <div class="card" *ngFor="let card of displayedProjects" style="width: 18rem;">
+    <div class="card" *ngFor="let card of displayedProjects" [ngClass]="{'card-animation' : isVisible == true}" style="width: 18rem;">
         <img src="{{card.img}}" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">{{card.name}}</h5>

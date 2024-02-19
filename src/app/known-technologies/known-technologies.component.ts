@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { KnownTechnologiesServiceService } from '../Services/known-technologies-service.service';
 
 @Component({
@@ -7,6 +7,7 @@ import { KnownTechnologiesServiceService } from '../Services/known-technologies-
   styleUrls: ['./known-technologies.component.scss']
 })
 export class KnownTechnologiesComponent implements OnInit{
+  @Input() isVisible : boolean = false;   
   backendData:any[] = [] 
   FrontendData:any[] = [] 
   UtilitariesData:any[] = [] 

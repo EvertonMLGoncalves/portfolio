@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'who-i-am',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./who-i-am.component.scss']
 })
 export class WhoIAmComponent {
-
+  @Input() isVisible : boolean = false;   
 }

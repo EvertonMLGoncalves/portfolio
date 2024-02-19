@@ -1,7 +1,6 @@
 <div class="teste">
-
-    <first-page></first-page>
-    <who-i-am></who-i-am> 
-    <known-technologies></known-technologies> 
-    <works></works>
+  <first-page [isVisible]="firstComponentVisibility" class="firstComponent"></first-page>
+  <who-i-am [isVisible]="secondComponentVisibility" class="secondComponent"></who-i-am>
+  <known-technologies [isVisible]="thirdComponentVisibility" class="thirdComponent"></known-technologies>
+  <works [isVisible]="fourthComponentVisibility" class="fourthComponent"></works>
 </div>

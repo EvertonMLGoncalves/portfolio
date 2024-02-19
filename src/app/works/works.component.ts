@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { WorksServiceService } from '../Services/works-service.service';
 
 @Component({
@@ -7,7 +7,7 @@ import { WorksServiceService } from '../Services/works-service.service';
   styleUrls: ['./works.component.scss']
 })
 export class WorksComponent implements OnInit{ 
-
+  @Input() isVisible : boolean = false;   
   displayedProjects : any[] = [] 
   constructor(private _service:WorksServiceService) {} 
 
