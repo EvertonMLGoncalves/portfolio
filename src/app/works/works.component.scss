@@ -53,11 +53,13 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 40px;
+  gap: 40px; 
+  
 }
 .card {
   background-color: #4b4b4b;
-  color: #ffffff;
+  color: #ffffff; 
+  margin-bottom: 10px;
 }
 .card-animation {
   -webkit-animation: puff-in-center 0.5s cubic-bezier(0.47, 0, 0.745, 0.715)

@@ -57,6 +57,11 @@
 }
 a {
   text-decoration: none;
+} 
+a  :hover{ 
+  color: rgb(19,19,19); 
+  text-decoration: none;
+  background-color: #C9FF33;
 }
 .custom-btn {
   background-color: #bbed2f;
@@ -69,7 +74,8 @@ a {
   justify-content: space-between;
   align-items: center;
   border: none;
-}
+} 
+
 .custom-btn-animation {
   -webkit-animation: slide-in-left 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s
     both;
@@ -96,17 +102,26 @@ a {
   background-color: #000000;
   width: clamp(0.2rem, 2vw, 0.2rem);
 }
+// .arrow {
+//   // margin-top: 0.7rem;
+//   // margin-left: 10px;
+//   // margin-right: 5px;
+//   // justify-content: flex-end;
+//   // min-width: 100%;
+//   // display: flex;
+//   // justify-content: flex-start;
+// }
 .arrow {
-  margin-top: 0.7rem;
-  scale: 1.3;
-  margin-left: 10px;
-  margin-right: 5px;
-  justify-content: flex-end;
-  min-width: 100%;
-  display: flex;
-  justify-content: flex-start;
+  height: 100%;
 }
-
+i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-left: 5px;
+  margin-right: 5px;
+}
 @media (max-width: 1479px) {
   .content-main {
     flex-wrap: wrap-reverse;
