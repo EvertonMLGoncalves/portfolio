@@ -35,5 +35,18 @@
       "assets\\imgs\\html.png",
       "assets\\imgs\\css.png"
     ]
+  },
+  {
+    "name": "My-Portifolio",
+    "description": "Literally the code of this web application developed in angular",
+    "img": "assets\\jsons-imgs\\portfolio.jpg",
+    "link": "https://github.com/EvertonMLGoncalves/portfolio",
+    "stacks": ["frontend"],
+    "icons": [
+      "assets\\imgs\\angular.png",
+      "assets\\imgs\\typescript.png",
+      "assets\\imgs\\html.png",
+      "assets\\imgs\\css.png"
+    ]
   }
 ]
