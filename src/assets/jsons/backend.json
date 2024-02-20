@@ -5,17 +5,17 @@
         "img" : "assets\\imgs\\python.png"
     },
     { 
-        "name": ".NET", 
+        "name": ".NET Core", 
         "level" : "intermediary",
         "img" : "assets\\imgs\\Csharp.png"
     },
     { 
-        "name": "ASP.NET core", 
+        "name": "ASP.NET Core", 
         "level" : "intermediary",
         "img" : "assets\\imgs\\Csharp.png"
     },
     { 
-        "name": "Entity Framework core", 
+        "name": "Entity Framework Core", 
         "level" : "intermediary",
         "img" : "assets\\imgs\\Csharp.png"
     }

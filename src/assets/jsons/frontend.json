@@ -21,7 +21,7 @@
     },
     {
         "name": "TypeScript", 
-        "level" : "intermediary",
+        "level" : "basic",
         "img" : "assets\\imgs\\typescript.png"
     }
 ]
