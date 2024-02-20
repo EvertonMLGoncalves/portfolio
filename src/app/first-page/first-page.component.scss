@@ -61,7 +61,6 @@ a {
 a  :hover{ 
   color: rgb(19,19,19); 
   text-decoration: none;
-  background-color: #C9FF33;
 }
 .custom-btn {
   background-color: #bbed2f;
@@ -81,9 +80,7 @@ a  :hover{
     both;
   animation: slide-in-left 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s both;
 }
-.custom-btn:hover {
-  cursor: pointer;
-}
+
 .custom-btn p {
   margin-left: clamp(0px, 2vw, 1.9rem);
   flex-grow: 1;
