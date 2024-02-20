@@ -6,24 +6,27 @@
   display: flex;
   justify-content: space-between;
 }
+a {
+  text-decoration: none;
+}
+ul {
+  display: grid;
+  gap: 10px; 
+  
+}
+li {
+  display: flex;
+  gap: 10px; 
+  
+}
 i {
   color: #fff;
   font-size: 25px;
   display: flex;
-}
-ul {
-  display: grid;
-  gap: 10px;
-}
-li {
-  display: flex;
-  gap: 10px;
-}
-h6 {
-  color: #fff;
-}
-a {
-  text-decoration: none;
+} 
+p{ 
+  color: #fff; 
+  font-size: clamp(0.8rem, 1vw, 1rem);
 }
 .linkedin-github {
   display: flex;
@@ -31,7 +34,7 @@ a {
   margin: 10px;
 }
 .linkedin-github i {
-  font-size: 50px;
+  font-size: clamp(2rem, 3vw, 3rem);
 }
 .container-animation {
   -webkit-animation: slide-in-fwd-center 0.7s
