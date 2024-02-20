@@ -1,0 +1,65 @@
+@import url("https://fonts.cdnfonts.com/css/tt-commons?styles=87752");
+* {
+  font-family: "TT Commons", sans-serif;
+}
+.contact {
+  display: flex;
+  justify-content: space-between;
+}
+i {
+  color: #fff;
+  font-size: 25px;
+  display: flex;
+}
+ul {
+  display: grid;
+  gap: 10px;
+}
+li {
+  display: flex;
+  gap: 10px;
+}
+h6 {
+  color: #fff;
+}
+a {
+  text-decoration: none;
+}
+.linkedin-github {
+  display: flex;
+  gap: 20px;
+  margin: 10px;
+}
+.linkedin-github i {
+  font-size: 50px;
+}
+.container-animation {
+  -webkit-animation: slide-in-fwd-center 0.7s
+    cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-fwd-center 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+//animations:
+@-webkit-keyframes slide-in-fwd-center {
+  0% {
+    -webkit-transform: translateZ(-1400px);
+    transform: translateZ(-1400px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-fwd-center {
+  0% {
+    -webkit-transform: translateZ(-1400px);
+    transform: translateZ(-1400px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}

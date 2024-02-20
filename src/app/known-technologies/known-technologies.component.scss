@@ -17,7 +17,6 @@
   margin-top: 6rem;
 }
 .tittle h1 {
-  // font-size: 5rem;
   font-size: clamp(2.4rem, 5vw, 3rem);
   font-weight: 400;
 }
@@ -30,27 +29,21 @@
 .content > * {
   flex: 1;
 }
-
-.backend {
+.technologiesList{ 
   margin: 2rem;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   gap: 10px;
+}
+.backend {
+  @extend .technologiesList
 }
 .frontend {
-  margin: 2rem;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  gap: 10px;
+  @extend .technologiesList
 }
 .utilitaries {
-  margin: 2rem;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  gap: 10px;
+  @extend .technologiesList
 }
 h1 {
   font-size: clamp(3rem, 4vw, 4rem);
@@ -72,14 +65,12 @@ ul {
 }
 li {
   list-style-type: none;
-  // font-size: 2rem;
+
   font-size: clamp(1.5rem, 1.5vw, 3rem);
   font-weight: 400;
   
 }
 li img {
-  // width: 3rem;
-  // height: 3rem;
   width: clamp(1.5rem, 3vw, 3rem);
   height: clamp(1.5rem, 3vw, 3rem);
 } 

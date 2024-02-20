@@ -22,7 +22,8 @@ h1 {
 .custom-btn-animation {
   -webkit-animation: bounce-in-top 1s both;
   animation: bounce-in-top 1s both;
-}
+} 
+
 .back-btn {
   background-color: #7934a4;
   color: #ffffff;
@@ -59,9 +60,9 @@ h1 {
   color: #ffffff;
 }
 .card-animation {
-  -webkit-animation: puff-in-center 0.7s cubic-bezier(0.47, 0, 0.745, 0.715)
+  -webkit-animation: puff-in-center 0.5s cubic-bezier(0.47, 0, 0.745, 0.715)
     both;
-  animation: puff-in-center 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) both;
+  animation: puff-in-center 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) both;
 }
 .card-body a {
   background-color: #bbed2f;

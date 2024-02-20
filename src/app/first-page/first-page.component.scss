@@ -7,30 +7,22 @@
   font-family: "TT Commons", sans-serif;
 }
 .content {
-  // position: absolute;
-  // top: 0;
   background-color: #000000;
   min-height: clamp(1vh, 100vw, 100vh);
   width: 100%;
 }
-// @media (max-width: 755px) {
-//   .content{
-//     max
-//   }
-// }
+
 .content-main {
   display: flex;
   flex-wrap: wrap;
   margin: 2rem;
   justify-content: center;
-  //  gap: 8rem;
+
   gap: clamp(2rem, 8vw, 8rem);
-  // gap: clamp(10rem, 32vw, 32rem)
 }
 .text-and-button {
   color: #fff;
   display: flex;
-  // gap: 6rem;
   gap: clamp(2rem, 2vw, 2rem);
   flex-direction: column;
   flex-wrap: wrap;
@@ -41,53 +33,46 @@
   animation: slide-in-left 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 .name {
-  // font-size: 7rem;
   font-size: clamp(2rem, 10vw, 8rem);
   font-weight: 350;
   line-height: 1.2;
 }
 .info-text {
-  // font-size: 2rem;
   font-size: clamp(1rem, 2vw, 4rem);
   font-weight: 300;
 }
 .img-part {
-  // margin-top: 8rem;
   margin-top: clamp(2rem, 8vw, 8rem);
 }
 .my-photo {
-  // width: 30rem;
   width: clamp(15rem, 35vw, 35rem);
-  // height: 30rem;
   height: clamp(15rem, 35vw, 35rem);
   aspect-ratio: 16/9;
   object-fit: cover;
   clip-path: circle();
-  
-} 
-.my-photo-animation{  
+}
+.my-photo-animation {
   -webkit-animation: slide-in-fwd-center 3s ease-out both;
   animation: slide-in-fwd-center 2s ease-out both;
 }
-
+a {
+  text-decoration: none;
+}
 .custom-btn {
   background-color: #bbed2f;
-  // font-size: 2rem;
   font-size: clamp(1rem, 2vw, 2rem);
-  // min-width: 22rem;
   width: clamp(10rem, 22vw, 22rem);
   border-radius: 50px;
   display: flex;
-  // height: 4rem;
   height: clamp(2.5rem, 4vw, 4rem);
   display: flex;
   justify-content: space-between;
   align-items: center;
   border: none;
-  
-} 
-.custom-btn-animation{ 
-  -webkit-animation: slide-in-left 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s both;
+}
+.custom-btn-animation {
+  -webkit-animation: slide-in-left 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s
+    both;
   animation: slide-in-left 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s both;
 }
 .custom-btn:hover {
@@ -105,14 +90,11 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  // gap: 1.4rem;
-  // margin-right: 3rem;
 }
 .line {
   height: 100%;
   background-color: #000000;
   width: clamp(0.2rem, 2vw, 0.2rem);
-  // margin-left: 70px;
 }
 .arrow {
   margin-top: 0.7rem;
@@ -200,8 +182,8 @@
     -webkit-transform: translateX(-1000px);
     transform: translateX(-1000px);
     opacity: 0;
-  } 
-  50% { 
+  }
+  50% {
     opacity: 0;
   }
   100% {

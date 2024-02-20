@@ -1,4 +1,4 @@
-import { ElementRef, EventEmitter, NgModule, ViewChild } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -8,6 +8,7 @@ import { WhoIAmComponent } from './who-i-am/who-i-am.component';
 import { KnownTechnologiesComponent } from './known-technologies/known-technologies.component'; 
 import { HttpClientModule } from '@angular/common/http';
 import { WorksComponent } from './works/works.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { WorksComponent } from './works/works.component';
     FirstPageComponent,
     WhoIAmComponent,
     KnownTechnologiesComponent,
-    WorksComponent
+    WorksComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
