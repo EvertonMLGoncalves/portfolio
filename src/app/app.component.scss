@@ -12,7 +12,8 @@ $mainHeigth : 100vh;
 first-page{ 
     display: flex; 
     flex-direction: column;  
-    width: $mainWidth;
+    width: $mainWidth; 
+    
 } 
 who-i-am{ 
     min-height: $mainHeigth;
