@@ -29,7 +29,8 @@ works{
     margin: 0;
     box-sizing: border-box; 
     width: $mainWidth;
-    min-height: $mainHeigth;
+    min-height: $mainHeigth; 
+    overflow-x: hidden;
 } 
 contact{ 
     background-color: #212121; 
