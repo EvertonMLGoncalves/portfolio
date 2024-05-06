@@ -1,8 +1,8 @@
 [ 
     { 
-        "name": "Python", 
+        "name": "Java", 
         "level" : "basic",
-        "img" : "assets\\imgs\\python.png"
+        "img" : "assets\\imgs\\java.png"
     },
     { 
         "name": ".NET Core", 
@@ -18,6 +18,11 @@
         "name": "Entity Framework Core", 
         "level" : "intermediary",
         "img" : "assets\\imgs\\Csharp.png"
+    },
+    { 
+        "name": "Python", 
+        "level" : "basic",
+        "img" : "assets\\imgs\\python.png"
     }
     
 ]
