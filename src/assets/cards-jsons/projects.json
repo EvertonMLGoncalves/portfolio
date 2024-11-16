@@ -54,7 +54,7 @@
   },
   {
     "name": "My-Portifolio",
-    "description": "Literally the code of this web application developed in angular",
+    "description": "The complete codebase for this web application, created using Angular.",
     "img": "assets\\jsons-imgs\\portfolio.jpg",
     "link": "https://github.com/EvertonMLGoncalves/portfolio",
     "stacks": ["frontend"],
