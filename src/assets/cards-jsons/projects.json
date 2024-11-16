@@ -5,27 +5,42 @@
     "img": "assets\\jsons-imgs\\clinic.jpg",
     "link": "https://github.com/EvertonMLGoncalves/APIConsultorio",
     "stacks": ["backend"],
-    "icons": ["assets\\imgs\\Csharp.png", "assets\\imgs\\sql-server.png"]
+    "icons": [
+      "assets\\imgs\\Csharp.png",
+      "assets\\imgs\\asp-net.png",
+      "assets\\imgs\\entity-framework.png",
+      "assets\\imgs\\sql-server.png"
+    ]
   },
   {
     "name": "AliensAPI",
-    "description": "An API for the control of entry and exit of aliens with email notifications.",
+    "description": "An API designed to manage the entry and exit of aliens, featuring email notifications.",
     "img": "assets\\jsons-imgs\\aliens.jpg",
     "link": "https://github.com/EvertonMLGoncalves/Aliens_API",
     "stacks": ["backend"],
-    "icons": ["assets\\imgs\\Csharp.png", "assets\\imgs\\sql-server.png"]
+    "icons": [
+      "assets\\imgs\\Csharp.png",
+      "assets\\imgs\\asp-net.png",
+      "assets\\imgs\\entity-framework.png",
+      "assets\\imgs\\sql-server.png"
+    ]
   },
   {
     "name": "+GreenBack-End",
-    "description": "Back-end of the final project for the +Devs2Blu 2023 program.",
+    "description": "Back-end development for the final project in the +Devs2Blu 2023 program.",
     "img": "assets\\jsons-imgs\\+green.jpg",
     "link": "https://github.com/TechTitans-MeioAmbiente/green/blob/main/BackEnd/back-end.md",
     "stacks": ["backend"],
-    "icons": ["assets\\imgs\\Csharp.png", "assets\\imgs\\sql-server.png"]
+    "icons": [
+      "assets\\imgs\\Csharp.png",
+      "assets\\imgs\\asp-net.png",
+      "assets\\imgs\\entity-framework.png",
+      "assets\\imgs\\sql-server.png"
+    ]
   },
   {
     "name": "CRUD-Employee",
-    "description": "A simple-crud developed using angular and angular material",
+    "description": "A basic CRUD system developed using Angular and Angular Material components",
     "img": "assets\\jsons-imgs\\employee.jpg",
     "link": "https://github.com/EvertonMLGoncalves/CRUD-Employee",
     "stacks": ["frontend"],
@@ -33,7 +48,8 @@
       "assets\\imgs\\angular.png",
       "assets\\imgs\\typescript.png",
       "assets\\imgs\\html.png",
-      "assets\\imgs\\css.png"
+      "assets\\imgs\\css.png",
+      "assets\\imgs\\angular-material.png"
     ]
   },
   {
@@ -46,7 +62,8 @@
       "assets\\imgs\\angular.png",
       "assets\\imgs\\typescript.png",
       "assets\\imgs\\html.png",
-      "assets\\imgs\\css.png"
+      "assets\\imgs\\css.png",
+      "assets\\imgs\\bootstrap.png"
     ]
   }
 ]

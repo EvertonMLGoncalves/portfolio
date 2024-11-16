@@ -1,27 +1,42 @@
-[ 
-    {
-        "name": "HTML 5", 
-        "level" : "intermediary",
-        "img" : "assets\\imgs\\html.png"
-    },
-    {
-        "name": "CSS 3", 
-        "level" : "intermediary",
-        "img" : "assets\\imgs\\css.png"
-    },
-    {
-        "name": "JavaScript", 
-        "level" : "basic",
-        "img" : "assets\\imgs\\javascript.png"
-    },
-    {
-        "name": "Angular", 
-        "level" : "basic",
-        "img" : "assets\\imgs\\angular.png"
-    },
-    {
-        "name": "TypeScript", 
-        "level" : "basic",
-        "img" : "assets\\imgs\\typescript.png"
-    }
+[
+  {
+    "name": "HTML 5",
+    "level": "intermediate",
+    "img": "assets\\imgs\\html.png"
+  },
+  {
+    "name": "CSS 3",
+    "level": "intermediate",
+    "img": "assets\\imgs\\css.png"
+  },
+  {
+    "name": "JavaScript",
+    "level": "basic",
+    "img": "assets\\imgs\\javascript.png"
+  },
+  {
+    "name": "Angular",
+    "level": "basic",
+    "img": "assets\\imgs\\angular.png"
+  },
+  {
+    "name": "TypeScript",
+    "level": "basic",
+    "img": "assets\\imgs\\typescript.png"
+  },
+  {
+    "name": "Boostrap 5",
+    "level": "intermediate",
+    "img": "assets\\imgs\\bootstrap.png"
+  },
+  {
+    "name": "PrimeNG",
+    "level": "basic",
+    "img": "assets\\imgs\\primeng.png"
+  },
+  {
+    "name": "Angular Material",
+    "level": "intermediate",
+    "img": "assets\\imgs\\angular-material.png"
+  }
 ]

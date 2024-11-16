@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+.custom-btn {
+  padding: clamp(0.5rem, 1vw, 1rem) clamp(1rem, 6vw, 6rem);
+  border-radius: 40px;
+  border: none;
+}

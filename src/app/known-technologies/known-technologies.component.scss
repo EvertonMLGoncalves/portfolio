@@ -29,29 +29,52 @@
 .content > * {
   flex: 1;
 }
-.technologiesList{ 
+
+.technologiesList {
   margin: 2rem;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   gap: 10px;
 }
+.myList {
+  max-height: 20rem;
+  overflow-y: scroll;
+  display: grid;
+}
+.myList::-webkit-scrollbar {
+  width: 8px;
+}
+
+.myList::-webkit-scrollbar-track {
+  background: #2c2c2c;
+  border-radius: 4px;
+}
+
+.myList::-webkit-scrollbar-thumb {
+  background-color: #8c8c8c;
+  border-radius: 4px;
+  border: 2px solid #2c2c2c;
+}
+
+.myList::-webkit-scrollbar-thumb:hover {
+  background-color: #6b6b6b;
+}
+
 .backend {
-  @extend .technologiesList
+  @extend .technologiesList;
 }
 .frontend {
-  @extend .technologiesList
+  @extend .technologiesList;
 }
 .utilitaries {
-  @extend .technologiesList
+  @extend .technologiesList;
 }
 h1 {
   font-size: clamp(3rem, 4vw, 4rem);
   font-weight: 350;
   text-align: left;
-  
-} 
-.h-animation{ 
+}
+.h-animation {
   -webkit-animation: slide-in-left 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94)
     both;
   animation: slide-in-left 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
@@ -68,13 +91,12 @@ li {
 
   font-size: clamp(1.5rem, 1.5vw, 3rem);
   font-weight: 400;
-  
 }
 li img {
   width: clamp(1.5rem, 3vw, 3rem);
   height: clamp(1.5rem, 3vw, 3rem);
-} 
-.l-animation{ 
+}
+.l-animation {
   -webkit-animation: slide-in-left 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94)
     0.5s both;
   animation: slide-in-left 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s both;

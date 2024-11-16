@@ -1,28 +1,47 @@
-[ 
-    { 
-        "name": "Java", 
-        "level" : "intermediary",
-        "img" : "assets\\imgs\\java.png"
-    },
-    { 
-        "name": ".NET Core", 
-        "level" : "intermediary",
-        "img" : "assets\\imgs\\Csharp.png"
-    },
-    { 
-        "name": "ASP.NET Core", 
-        "level" : "intermediary",
-        "img" : "assets\\imgs\\Csharp.png"
-    },
-    { 
-        "name": "Entity Framework Core", 
-        "level" : "intermediary",
-        "img" : "assets\\imgs\\Csharp.png"
-    },
-    { 
-        "name": "Python", 
-        "level" : "basic",
-        "img" : "assets\\imgs\\python.png"
-    }
-    
+[
+  {
+    "name": "Java",
+    "level": "Intermediate",
+    "img": "assets\\imgs\\java.png"
+  },
+  {
+    "name": "Spring boot",
+    "level": "Intermediate",
+    "img": "assets\\imgs\\spring.png"
+  },
+  {
+    "name": "JUnit",
+    "level": "Intermediate",
+    "img": "assets\\imgs\\junit.png"
+  },
+  {
+    "name": "Flyway",
+    "level": "Intermediate",
+    "img": "assets\\imgs\\flyway.png"
+  },
+  {
+    "name": "JWT",
+    "level": "Intermediate",
+    "img": "assets\\imgs\\jwt.png"
+  },
+  {
+    "name": ".NET Core",
+    "level": "Intermediate",
+    "img": "assets\\imgs\\Csharp.png"
+  },
+  {
+    "name": "ASP.NET Core",
+    "level": "Intermediate",
+    "img": "assets\\imgs\\asp-net.png"
+  },
+  {
+    "name": "Entity Framework Core",
+    "level": "Intermediate",
+    "img": "assets\\imgs\\entity-framework.png"
+  },
+  {
+    "name": "Python",
+    "level": "basic",
+    "img": "assets\\imgs\\python.png"
+  }
 ]
