@@ -26,7 +26,4 @@ export class KnownTechnologiesComponent implements OnInit{
       this.UtilitariesData = data
     })
   } 
-  
-   
-
 }

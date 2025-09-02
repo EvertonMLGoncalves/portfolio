@@ -11,21 +11,19 @@ a {
 }
 ul {
   display: grid;
-  gap: 10px; 
-  
+  gap: 10px;
 }
 li {
   display: flex;
-  gap: 10px; 
-  
+  gap: 10px;
 }
 i {
   color: #fff;
   font-size: 25px;
   display: flex;
-} 
-p{ 
-  color: #fff; 
+}
+p {
+  color: #fff;
   font-size: clamp(0.8rem, 1vw, 1rem);
 }
 .linkedin-github {

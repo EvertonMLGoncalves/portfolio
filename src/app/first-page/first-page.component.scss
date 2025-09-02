@@ -66,7 +66,7 @@ a  :hover{
   background-color: #bbed2f;
   font-size: clamp(1rem, 2vw, 2rem);
   width: clamp(10rem, 22vw, 22rem);
-  border-radius: 50px;
+  border-radius: 10px;
   display: flex;
   height: clamp(2.5rem, 4vw, 4rem);
   display: flex;
@@ -99,15 +99,6 @@ a  :hover{
   background-color: #000000;
   width: clamp(0.2rem, 2vw, 0.2rem);
 }
-// .arrow {
-//   // margin-top: 0.7rem;
-//   // margin-left: 10px;
-//   // margin-right: 5px;
-//   // justify-content: flex-end;
-//   // min-width: 100%;
-//   // display: flex;
-//   // justify-content: flex-start;
-// }
 .arrow {
   height: 100%;
 }

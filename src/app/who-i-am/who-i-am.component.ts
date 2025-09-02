@@ -6,5 +6,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./who-i-am.component.scss']
 })
 export class WhoIAmComponent {
-  @Input() isVisible : boolean = false;   
+  @Input() isVisible: boolean = false;
 }

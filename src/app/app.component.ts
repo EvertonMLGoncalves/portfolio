@@ -1,9 +1,9 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
-import { FirstPageComponent } from './first-page/first-page.component';
-import { WhoIAmComponent } from './who-i-am/who-i-am.component';
-import { KnownTechnologiesComponent } from './known-technologies/known-technologies.component';
-import { WorksComponent } from './works/works.component';
 import { ContactComponent } from './contact/contact.component';
+import { FirstPageComponent } from './first-page/first-page.component';
+import { KnownTechnologiesComponent } from './known-technologies/known-technologies.component';
+import { WhoIAmComponent } from './who-i-am/who-i-am.component';
+import { WorksComponent } from './works/works.component';
 
 @Component({
   selector: 'app-root',
@@ -23,21 +23,21 @@ export class AppComponent implements AfterViewInit {
   @ViewChild(WhoIAmComponent, { read: ElementRef }) secondComponent: ElementRef;
   @ViewChild(KnownTechnologiesComponent, { read: ElementRef })
   thirdComponent: ElementRef;
-  @ViewChild(WorksComponent, { read: ElementRef }) fourthComponent: ElementRef; 
-  @ViewChild(ContactComponent, {read: ElementRef}) fifthComponent : ElementRef;
+  @ViewChild(WorksComponent, { read: ElementRef }) fourthComponent: ElementRef;
+  @ViewChild(ContactComponent, { read: ElementRef }) fifthComponent: ElementRef;
 
   constructor(
     firstComponent: ElementRef,
     secondComponent: ElementRef,
     thirdComponent: ElementRef,
-    fourthComponent: ElementRef, 
-    fifthComponent : ElementRef
+    fourthComponent: ElementRef,
+    fifthComponent: ElementRef
   ) {
     this.firstComponent = firstComponent;
     this.secondComponent = secondComponent;
     this.thirdComponent = thirdComponent;
-    this.fourthComponent = fourthComponent; 
-    this.fifthComponent = fifthComponent
+    this.fourthComponent = fourthComponent;
+    this.fifthComponent = fifthComponent;
   }
   changeVisibility(bool: boolean, componentNumber: number) {
     switch (componentNumber) {
@@ -52,10 +52,10 @@ export class AppComponent implements AfterViewInit {
         break;
       case 4:
         this.fourthComponentVisibility = bool;
-        break; 
-      case 5: 
-      this.fifthComponentVisibility = bool; 
-      break;
+        break;
+      case 5:
+        this.fifthComponentVisibility = bool;
+        break;
     }
   }
   private myObserver = new IntersectionObserver((entries) => {
@@ -73,10 +73,10 @@ export class AppComponent implements AfterViewInit {
             break;
           case 'fourthComponent':
             this.changeVisibility(true, 4);
-            break; 
-          case 'fifthComponent': 
-          this.changeVisibility(true, 5);
-          break;
+            break;
+          case 'fifthComponent':
+            this.changeVisibility(true, 5);
+            break;
         }
       } else {
         switch (entry.target.classList.value) {
@@ -91,8 +91,8 @@ export class AppComponent implements AfterViewInit {
             break;
           case 'fourthComponent':
             this.changeVisibility(false, 4);
-            break; 
-          case 'fifthComponent': 
+            break;
+          case 'fifthComponent':
             this.changeVisibility(false, 5);
             break;
         }
@@ -101,7 +101,6 @@ export class AppComponent implements AfterViewInit {
   });
 
   ngAfterViewInit(): void {
-    // // Inicie a observação
     this.myObserver.observe(this.firstComponent.nativeElement);
     this.myObserver.observe(this.secondComponent.nativeElement);
     this.myObserver.observe(this.thirdComponent.nativeElement);

@@ -20,6 +20,7 @@ export class WorksComponent implements OnInit {
       error: console.log();
     });
   }
+
   getBackEndProjects(): void {
     if (this.verifyStack('backend')) this.resetProjects();
     else {
@@ -34,6 +35,7 @@ export class WorksComponent implements OnInit {
       });
     }
   }
+
   getFronEndProjects(): void {
     if (this.verifyStack('frontend')) this.resetProjects();
     else {
@@ -48,6 +50,7 @@ export class WorksComponent implements OnInit {
       });
     }
   }
+
   resetProjects(): void {
     this._service.getProjects().subscribe((data: any[]) => {
       next: {
@@ -56,6 +59,7 @@ export class WorksComponent implements OnInit {
       error: console.log();
     });
   }
+  
   verifyStack(stack: string): boolean {
     let isActive = this.displayedProjects.every((project: any) =>
       project.stacks.includes(stack)
