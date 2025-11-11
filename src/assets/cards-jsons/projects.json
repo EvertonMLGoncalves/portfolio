@@ -4,7 +4,9 @@
     "description": "An API for the management of appointments, doctors, and patients.",
     "img": "assets\\jsons-imgs\\clinic.jpg",
     "link": "https://github.com/EvertonMLGoncalves/APIConsultorio",
-    "stacks": ["backend"],
+    "stacks": [
+      "backend"
+    ],
     "icons": [
       "assets\\imgs\\Csharp.png",
       "assets\\imgs\\asp-net.png",
@@ -17,7 +19,9 @@
     "description": "An API designed to manage the entry and exit of aliens, featuring email notifications.",
     "img": "assets\\jsons-imgs\\aliens.jpg",
     "link": "https://github.com/EvertonMLGoncalves/Aliens_API",
-    "stacks": ["backend"],
+    "stacks": [
+      "backend"
+    ],
     "icons": [
       "assets\\imgs\\Csharp.png",
       "assets\\imgs\\asp-net.png",
@@ -30,7 +34,9 @@
     "description": "Back-end development for the final project in the +Devs2Blu 2023 program.",
     "img": "assets\\jsons-imgs\\+green.jpg",
     "link": "https://github.com/TechTitans-MeioAmbiente/green/blob/main/BackEnd/back-end.md",
-    "stacks": ["backend"],
+    "stacks": [
+      "backend"
+    ],
     "icons": [
       "assets\\imgs\\Csharp.png",
       "assets\\imgs\\asp-net.png",
@@ -43,7 +49,9 @@
     "description": "A basic CRUD system developed using Angular and Angular Material components",
     "img": "assets\\jsons-imgs\\employee.jpg",
     "link": "https://github.com/EvertonMLGoncalves/CRUD-Employee",
-    "stacks": ["frontend"],
+    "stacks": [
+      "frontend"
+    ],
     "icons": [
       "assets\\imgs\\angular.png",
       "assets\\imgs\\typescript.png",
@@ -57,7 +65,9 @@
     "description": "The complete codebase for this web application, created using Angular.",
     "img": "assets\\jsons-imgs\\portfolio.jpg",
     "link": "https://github.com/EvertonMLGoncalves/portfolio",
-    "stacks": ["frontend"],
+    "stacks": [
+      "frontend"
+    ],
     "icons": [
       "assets\\imgs\\angular.png",
       "assets\\imgs\\typescript.png",

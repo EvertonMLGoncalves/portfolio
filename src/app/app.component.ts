@@ -39,6 +39,7 @@ export class AppComponent implements AfterViewInit {
     this.fourthComponent = fourthComponent;
     this.fifthComponent = fifthComponent;
   }
+
   changeVisibility(bool: boolean, componentNumber: number) {
     switch (componentNumber) {
       case 1:
@@ -58,6 +59,7 @@ export class AppComponent implements AfterViewInit {
         break;
     }
   }
+
   private myObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {

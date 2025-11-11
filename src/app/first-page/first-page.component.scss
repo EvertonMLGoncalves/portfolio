@@ -1,11 +1,13 @@
 @import url("https://fonts.cdnfonts.com/css/tt-commons?styles=87752");
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "TT Commons", sans-serif;
 }
+
 .content {
   background-color: #000000;
   min-height: 100vh;
@@ -20,6 +22,7 @@
 
   gap: clamp(2rem, 8vw, 8rem);
 }
+
 .text-and-button {
   color: #fff;
   display: flex;
@@ -27,23 +30,27 @@
   flex-direction: column;
   flex-wrap: wrap;
 }
+
 .text-div-animation {
-  -webkit-animation: slide-in-left 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
-    both;
+  -webkit-animation: slide-in-left 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: slide-in-left 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
+
 .name {
   font-size: clamp(2rem, 10vw, 8rem);
   font-weight: 350;
   line-height: 1.2;
 }
+
 .info-text {
   font-size: clamp(1rem, 2vw, 4rem);
   font-weight: 300;
 }
+
 .img-part {
   margin-top: clamp(2rem, 8vw, 8rem);
 }
+
 .my-photo {
   width: clamp(15rem, 35vw, 35rem);
   height: clamp(15rem, 35vw, 35rem);
@@ -51,17 +58,21 @@
   object-fit: cover;
   clip-path: circle();
 }
+
 .my-photo-animation {
   -webkit-animation: slide-in-fwd-center 3s ease-out both;
   animation: slide-in-fwd-center 2s ease-out both;
 }
+
 a {
   text-decoration: none;
-} 
-a  :hover{ 
-  color: rgb(19,19,19); 
+}
+
+a :hover {
+  color: rgb(19, 19, 19);
   text-decoration: none;
 }
+
 .custom-btn {
   background-color: #bbed2f;
   font-size: clamp(1rem, 2vw, 2rem);
@@ -73,11 +84,10 @@ a  :hover{
   justify-content: space-between;
   align-items: center;
   border: none;
-} 
+}
 
 .custom-btn-animation {
-  -webkit-animation: slide-in-left 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s
-    both;
+  -webkit-animation: slide-in-left 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s both;
   animation: slide-in-left 1.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
@@ -94,14 +104,17 @@ a  :hover{
   flex-direction: column;
   flex-wrap: wrap;
 }
+
 .line {
   height: 100%;
   background-color: #000000;
   width: clamp(0.2rem, 2vw, 0.2rem);
 }
+
 .arrow {
   height: 100%;
 }
+
 i {
   display: flex;
   justify-content: center;
@@ -110,6 +123,7 @@ i {
   margin-left: 5px;
   margin-right: 5px;
 }
+
 @media (max-width: 1479px) {
   .content-main {
     flex-wrap: wrap-reverse;
@@ -123,24 +137,28 @@ i {
     transform: translateX(-1000px);
     opacity: 0;
   }
+
   100% {
     -webkit-transform: translateX(0);
     transform: translateX(0);
     opacity: 1;
   }
 }
+
 @keyframes slide-in-left {
   0% {
     -webkit-transform: translateX(-1000px);
     transform: translateX(-1000px);
     opacity: 0;
   }
+
   100% {
     -webkit-transform: translateX(0);
     transform: translateX(0);
     opacity: 1;
   }
 }
+
 // my-photo animation
 @-webkit-keyframes slide-in-fwd-center {
   0% {
@@ -148,6 +166,7 @@ i {
     transform: translateZ(-1400px);
     opacity: 0;
   }
+
   100% {
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
@@ -161,12 +180,14 @@ i {
     transform: translateZ(-1400px);
     opacity: 0;
   }
+
   100% {
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
     opacity: 1;
   }
 }
+
 // custom-btn animation
 @-webkit-keyframes slide-in-left {
   0% {
@@ -174,21 +195,25 @@ i {
     transform: translateX(-1000px);
     opacity: 0;
   }
+
   100% {
     -webkit-transform: translateX(0);
     transform: translateX(0);
     opacity: 1;
   }
 }
+
 @keyframes slide-in-left {
   0% {
     -webkit-transform: translateX(-1000px);
     transform: translateX(-1000px);
     opacity: 0;
   }
+
   50% {
     opacity: 0;
   }
+
   100% {
     -webkit-transform: translateX(0);
     transform: translateX(0);

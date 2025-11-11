@@ -14,7 +14,7 @@
     <div class="frontend"> 
       <h1 class="content-h1" [ngClass]="{'h-animation' : isVisible == true}">Front-end</h1>
       <ul class="myList">
-        <li *ngFor="let data of FrontendData"  [ngClass]="{'l-animation' : isVisible == true}">
+        <li *ngFor="let data of frontendData"  [ngClass]="{'l-animation' : isVisible == true}">
           <img src="{{ data.img }}" alt="" /> {{ data.name }} ({{ data.level }})
         </li>
       </ul>
@@ -22,7 +22,7 @@
     <div class="utilitaries">
       <h1 class="content-h1" [ngClass]="{'h-animation' : isVisible == true}">Utilitaries</h1>
       <ul class="myList">
-        <li *ngFor="let data of UtilitariesData" [ngClass]="{'l-animation' : isVisible == true}">
+        <li *ngFor="let data of utilitariesData" [ngClass]="{'l-animation' : isVisible == true}">
           <img src="{{ data.img }}" alt="" /> {{ data.name }} ({{ data.level }})
         </li>
       </ul>

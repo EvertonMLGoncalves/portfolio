@@ -3,25 +3,31 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 $mainWidth: 100vw;
 $mainHeigth: 100vh;
+
 .content {
   display: flex;
   flex-direction: column;
 }
+
 first-page {
   display: flex;
   flex-direction: column;
   width: $mainWidth;
 }
+
 who-i-am {
   min-height: $mainHeigth;
   width: $mainWidth;
 }
+
 known-technologies {
   min-height: $mainHeigth;
   width: $mainWidth;
 }
+
 works {
   background-color: #000000;
   padding: 0;
@@ -31,6 +37,7 @@ works {
   min-height: $mainHeigth;
   overflow-x: hidden;
 }
+
 contact {
   background-color: #212121;
   padding: 0;

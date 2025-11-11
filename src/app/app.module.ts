@@ -19,6 +19,7 @@ import { WorksComponent } from './works/works.component';
     WorksComponent,
     ContactComponent,
   ],
+
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],

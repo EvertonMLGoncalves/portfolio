@@ -1,15 +1,15 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Project } from '../interfaces/project.interface';
 
 @Injectable({
   providedIn: 'root'
 })
-export class WorksServiceService {
-
-  constructor(private _http:HttpClient) { } 
+export class WorksService {
+  constructor(private http: HttpClient) { } 
    
-  getProjects() : Observable<any> { 
-    return this._http.get("assets/cards-jsons/projects.json")
+  getProjects(): Observable<Project[]> { 
+    return this.http.get<Project[]>("assets/cards-jsons/projects.json");
   }
 }
