@@ -1,0 +1,22 @@
+[
+  {
+    "name": "AI Usage",
+    "nameKey": "skills.ai.usage",
+    "icon": "bi-stars"
+  },
+  {
+    "name": "AI Development",
+    "nameKey": "skills.ai.development",
+    "icon": "bi-cpu"
+  },
+  {
+    "name": "Prompt Engineering",
+    "nameKey": "skills.ai.promptEngineering",
+    "icon": "bi-chat-square-text"
+  },
+  {
+    "name": "Machine Learning",
+    "nameKey": "skills.ai.machineLearning",
+    "icon": "bi-diagram-3"
+  }
+]

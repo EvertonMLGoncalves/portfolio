@@ -1,6 +1,182 @@
-/* You can add global styles to this file, and also import other style files */
-.custom-btn {
-  padding: clamp(0.5rem, 1vw, 1rem) clamp(1rem, 6vw, 6rem);
-  border-radius: 40px;
-  border: none;
+@use 'bootstrap-icons/font/bootstrap-icons.css';
+
+:root {
+  --bg: #07090c;
+  --bg-soft: #0c1015;
+  --surface: rgba(255, 255, 255, 0.04);
+  --surface-hover: rgba(255, 255, 255, 0.07);
+  --border: rgba(255, 255, 255, 0.09);
+  --text: #eef2f6;
+  --text-muted: #98a2b3;
+  --accent: #7ed957;
+  --accent-2: #bbed2f;
+  --accent-soft: rgba(126, 217, 87, 0.12);
+  --gradient: linear-gradient(120deg, var(--accent), var(--accent-2));
+  --radius: 20px;
+  --radius-sm: 12px;
+  --container: 1120px;
+  --nav-height: 72px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--nav-height);
+  color-scheme: dark;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+::selection {
+  background: var(--accent);
+  color: #000;
+}
+
+.container {
+  width: min(100% - 3rem, var(--container));
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: clamp(4.5rem, 9vw, 8rem);
+}
+
+.section-heading {
+  margin-bottom: clamp(2rem, 5vw, 3.5rem);
+
+  .eyebrow {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+  }
+
+  h2 {
+    font-size: clamp(2rem, 4.5vw, 3rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+  }
+}
+
+.gradient-text {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.85rem 1.6rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font: inherit;
+  font-weight: 600;
+  font-size: 0.98rem;
+  cursor: pointer;
+  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease), background 0.3s;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+
+  &-primary {
+    background: var(--gradient);
+    color: #07090c;
+    box-shadow: 0 8px 28px -8px rgba(126, 217, 87, 0.55);
+
+    &:hover {
+      box-shadow: 0 12px 34px -8px rgba(126, 217, 87, 0.75);
+    }
+  }
+
+  &-ghost {
+    background: var(--surface);
+    border-color: var(--border);
+    color: var(--text);
+
+    &:hover {
+      background: var(--surface-hover);
+      border-color: rgba(126, 217, 87, 0.5);
+    }
+  }
+}
+
+.glass {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+[appReveal] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.8s var(--ease), transform 0.8s var(--ease);
+  transition-delay: var(--reveal-delay, 0ms);
+
+  &.revealed {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  [appReveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+  }
 }

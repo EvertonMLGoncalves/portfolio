@@ -1,21 +1,21 @@
+import { provideHttpClient } from '@angular/common/http';
+import { provideHttpClientTesting } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { KnownTechnologiesComponent } from './known-technologies.component';
 
 describe('KnownTechnologiesComponent', () => {
-  let component: KnownTechnologiesComponent;
   let fixture: ComponentFixture<KnownTechnologiesComponent>;
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({
-      declarations: [KnownTechnologiesComponent]
-    });
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [KnownTechnologiesComponent],
+      providers: [provideHttpClient(), provideHttpClientTesting()],
+    }).compileComponents();
     fixture = TestBed.createComponent(KnownTechnologiesComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+    await fixture.whenStable();
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    expect(fixture.componentInstance).toBeTruthy();
   });
 });

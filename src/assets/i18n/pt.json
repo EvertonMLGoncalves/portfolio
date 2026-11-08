@@ -1,0 +1,116 @@
+{
+  "nav": {
+    "about": "Sobre",
+    "experience": "Experiência",
+    "technologies": "Tecnologias",
+    "works": "Projetos",
+    "contact": "Contato",
+    "main": "Navegação principal",
+    "menu": "Abrir ou fechar o menu",
+    "home": "Voltar ao topo",
+    "language": "Mudar o idioma para inglês"
+  },
+  "hero": {
+    "greeting": "Olá, eu sou",
+    "subtitle": "Entusiasta de Tecnologia da Informação + Programador Apaixonado",
+    "viewPortfolio": "Ver meu Portfólio",
+    "getInTouch": "Entrar em contato",
+    "photoAlt": "Foto de Everton Gonçalves"
+  },
+  "about": {
+    "eyebrow": "Sobre",
+    "title": "Quem sou e o que faço",
+    "intro": "Meu nome é",
+    "rest": ". Sou um programador apaixonado, dedicado ao aprendizado e à melhoria contínuos."
+  },
+  "experience": {
+    "eyebrow": "Carreira",
+    "title": "Experiência profissional",
+    "present": "Atual",
+    "location": "Blumenau, Santa Catarina, Brasil",
+    "types": {
+      "fullTime": "Tempo integral",
+      "internship": "Estágio",
+      "apprenticeship": "Aprendizagem"
+    },
+    "modes": {
+      "hybrid": "Híbrido",
+      "onSite": "Presencial"
+    },
+    "roles": {
+      "developer": {
+        "title": "Desenvolvedor de Software",
+        "summary": "Desenvolvimento full-stack com diversas tecnologias, dentre elas Java e Angular. Atuação no desenvolvimento de software de folha de pagamento."
+      },
+      "intern": {
+        "title": "Estagiário de Desenvolvimento de Software"
+      },
+      "apprentice": {
+        "title": "Jovem Aprendiz",
+        "bullets": [
+          "Formatação e configuração de notebooks e mini-desks",
+          "Suporte técnico nas estações de trabalho",
+          "Manutenção e atualização de inventário"
+        ]
+      }
+    }
+  },
+  "duration": {
+    "year": "ano",
+    "years": "anos",
+    "month": "mês",
+    "months": "meses",
+    "and": " e "
+  },
+  "skills": {
+    "eyebrow": "Skills",
+    "title": "Tecnologias que conheço",
+    "groups": {
+      "backend": "Back-end",
+      "frontend": "Front-end",
+      "ai": "IA",
+      "utilitaries": "Utilitários"
+    },
+    "ai": {
+      "usage": "Uso de IA",
+      "development": "Desenvolvimento de IA",
+      "promptEngineering": "Engenharia de Prompt",
+      "machineLearning": "Machine Learning"
+    }
+  },
+  "works": {
+    "eyebrow": "Portfólio",
+    "title": "Meus Projetos",
+    "filterLabel": "Filtrar projetos por stack",
+    "filters": {
+      "backend": "Back-End",
+      "frontend": "Front-End"
+    },
+    "preview": "prévia",
+    "goToProject": "Ver Projeto"
+  },
+  "projects": {
+    "clinic-api": {
+      "description": "Uma API para o gerenciamento de consultas, médicos e pacientes."
+    },
+    "aliens-api": {
+      "description": "Uma API criada para gerenciar a entrada e a saída de alienígenas, com notificações por e-mail."
+    },
+    "green-back-end": {
+      "description": "Desenvolvimento do back-end do projeto final do programa +Devs2Blu 2023."
+    },
+    "crud-employee": {
+      "description": "Um sistema CRUD básico desenvolvido com Angular e componentes do Angular Material."
+    },
+    "my-portfolio": {
+      "description": "O código completo desta aplicação web, criada com Angular."
+    }
+  },
+  "contact": {
+    "eyebrow": "Contato",
+    "titleStart": "Vamos",
+    "titleHighlight": "conversar",
+    "rights": "© {year} Everton Gonçalves. Todos os direitos reservados."
+  }
+}
+

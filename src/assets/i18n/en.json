@@ -1,0 +1,116 @@
+{
+  "nav": {
+    "about": "About",
+    "experience": "Experience",
+    "technologies": "Technologies",
+    "works": "Works",
+    "contact": "Contact",
+    "main": "Main navigation",
+    "menu": "Toggle navigation menu",
+    "home": "Back to top",
+    "language": "Switch language to Portuguese"
+  },
+  "hero": {
+    "greeting": "Hello, I'm",
+    "subtitle": "Information Technology Enthusiast + Passionate Programmer",
+    "viewPortfolio": "View my Portfolio",
+    "getInTouch": "Get in touch",
+    "photoAlt": "Portrait of Everton Gonçalves"
+  },
+  "about": {
+    "eyebrow": "About",
+    "title": "Who I am and what I do",
+    "intro": "My name is",
+    "rest": ". I'm a passionate programmer dedicated to continuous learning and improvement."
+  },
+  "experience": {
+    "eyebrow": "Career",
+    "title": "Professional experience",
+    "present": "Present",
+    "location": "Blumenau, Santa Catarina, Brazil",
+    "types": {
+      "fullTime": "Full-time",
+      "internship": "Internship",
+      "apprenticeship": "Apprenticeship"
+    },
+    "modes": {
+      "hybrid": "Hybrid",
+      "onSite": "On-site"
+    },
+    "roles": {
+      "developer": {
+        "title": "Software Developer",
+        "summary": "Full-stack development with a range of technologies, including Java and Angular. Working on payroll software."
+      },
+      "intern": {
+        "title": "Software Development Intern"
+      },
+      "apprentice": {
+        "title": "Apprentice",
+        "bullets": [
+          "Formatting and configuring notebooks and mini desktops",
+          "Technical support for workstations",
+          "Inventory maintenance and updates"
+        ]
+      }
+    }
+  },
+  "duration": {
+    "year": "yr",
+    "years": "yrs",
+    "month": "mo",
+    "months": "mos",
+    "and": " "
+  },
+  "skills": {
+    "eyebrow": "Skills",
+    "title": "Known technologies",
+    "groups": {
+      "backend": "Back-end",
+      "frontend": "Front-end",
+      "ai": "AI",
+      "utilitaries": "Utilitaries"
+    },
+    "ai": {
+      "usage": "AI Usage",
+      "development": "AI Development",
+      "promptEngineering": "Prompt Engineering",
+      "machineLearning": "Machine Learning"
+    }
+  },
+  "works": {
+    "eyebrow": "Portfolio",
+    "title": "My Works",
+    "filterLabel": "Filter projects by stack",
+    "filters": {
+      "backend": "Back-End",
+      "frontend": "Front-End"
+    },
+    "preview": "preview",
+    "goToProject": "Go to Project"
+  },
+  "projects": {
+    "clinic-api": {
+      "description": "An API for the management of appointments, doctors, and patients."
+    },
+    "aliens-api": {
+      "description": "An API designed to manage the entry and exit of aliens, featuring email notifications."
+    },
+    "green-back-end": {
+      "description": "Back-end development for the final project in the +Devs2Blu 2023 program."
+    },
+    "crud-employee": {
+      "description": "A basic CRUD system developed using Angular and Angular Material components."
+    },
+    "my-portfolio": {
+      "description": "The complete codebase for this web application, created using Angular."
+    }
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "titleStart": "Let's",
+    "titleHighlight": "talk",
+    "rights": "© {year} Everton Gonçalves. All rights reserved."
+  }
+}
+

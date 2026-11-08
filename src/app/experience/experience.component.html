@@ -1,0 +1,54 @@
+<section class="section container">
+  <div class="section-heading" appReveal>
+    <span class="eyebrow">{{ 'experience.eyebrow' | translate }}</span>
+    <h2>{{ 'experience.title' | translate }}</h2>
+  </div>
+
+  @if (company(); as info) {
+    <div class="company" appReveal="100">
+      <a [href]="info.url" target="_blank" rel="noopener">{{ info.name }}</a>
+      <span class="company__total">{{ totalDuration() }}</span>
+    </div>
+  }
+
+  <ol class="timeline">
+    @for (item of roles(); track item.role.id; let i = $index) {
+      <li class="role glass" [appReveal]="i * 120">
+        <header class="role__header">
+          <h3>{{ 'experience.roles.' + item.role.id + '.title' | translate }}</h3>
+          @if (!item.role.end) {
+            <span class="role__current">{{ 'experience.present' | translate }}</span>
+          }
+        </header>
+
+        <p class="role__meta">
+          {{ 'experience.types.' + item.role.type | translate }}
+          · {{ 'experience.modes.' + item.role.mode | translate }}
+        </p>
+        <p class="role__meta">
+          {{ item.period }} · {{ item.duration }}
+        </p>
+        <p class="role__meta">{{ 'experience.location' | translate }}</p>
+
+        @if (item.summary) {
+          <p class="role__summary">{{ item.summary }}</p>
+        }
+        @if (item.bullets.length) {
+          <ul class="role__bullets">
+            @for (bullet of item.bullets; track bullet) {
+              <li>{{ bullet }}</li>
+            }
+          </ul>
+        }
+
+        @if (item.role.skills.length) {
+          <ul class="role__skills">
+            @for (skill of item.role.skills; track skill) {
+              <li>{{ skill }}</li>
+            }
+          </ul>
+        }
+      </li>
+    }
+  </ol>
+</section>

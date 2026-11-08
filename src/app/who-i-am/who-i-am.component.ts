@@ -1,10 +1,11 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
+import { TranslatePipe } from '../i18n/translate.pipe';
+import { RevealDirective } from '../shared/reveal.directive';
 
 @Component({
   selector: 'who-i-am',
+  imports: [RevealDirective, TranslatePipe],
   templateUrl: './who-i-am.component.html',
-  styleUrls: ['./who-i-am.component.scss']
+  styleUrls: ['./who-i-am.component.scss'],
 })
-export class WhoIAmComponent {
-  @Input() isVisible: boolean = false;
-}
+export class WhoIAmComponent {}

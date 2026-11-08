@@ -1,7 +1,12 @@
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { bootstrapApplication } from '@angular/platform-browser';
+import { provideHttpClient } from '@angular/common/http';
+import { inject, provideAppInitializer } from '@angular/core';
+import { AppComponent } from './app/app.component';
+import { I18nService } from './app/i18n/i18n.service';
 
-import { AppModule } from './app/app.module';
-
-platformBrowserDynamic()
-  .bootstrapModule(AppModule)
-  .catch((err) => console.error(err));
+bootstrapApplication(AppComponent, {
+  providers: [
+    provideHttpClient(),
+    provideAppInitializer(() => inject(I18nService).load()),
+  ],
+}).catch((err) => console.error(err));

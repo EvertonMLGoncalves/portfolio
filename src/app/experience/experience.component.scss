@@ -1,0 +1,127 @@
+.company {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  margin-bottom: 2rem;
+
+  a {
+    font-size: 1.35rem;
+    font-weight: 600;
+    transition: color 0.2s;
+
+    &:hover {
+      color: var(--accent);
+    }
+  }
+
+  &__total {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+  }
+}
+
+.timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-left: 2rem;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 0.5rem;
+    bottom: 0.5rem;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--accent), transparent);
+    opacity: 0.5;
+  }
+}
+
+.role {
+  position: relative;
+  padding: 1.5rem 1.75rem;
+  transition: border-color 0.3s;
+
+  &:hover {
+    border-color: rgba(126, 217, 87, 0.35);
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: calc(-2rem + 1px);
+    top: 1.9rem;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 0 4px var(--bg);
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+
+    h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+  }
+
+  &__current {
+    padding: 0.15rem 0.7rem;
+    border-radius: 999px;
+    background: var(--accent-soft);
+    border: 1px solid rgba(126, 217, 87, 0.3);
+    color: var(--accent);
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+
+  &__meta {
+    color: var(--text-muted);
+    font-size: 0.92rem;
+  }
+
+  &__summary {
+    margin-top: 1rem;
+  }
+
+  &__bullets {
+    margin-top: 1rem;
+    padding-left: 1.2rem;
+    list-style: disc;
+
+    li {
+      margin-bottom: 0.3rem;
+    }
+
+    li::marker {
+      color: var(--accent);
+    }
+  }
+
+  &__skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1.1rem;
+
+    li {
+      padding: 0.2rem 0.75rem;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--text-muted);
+    }
+  }
+}
+

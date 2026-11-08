@@ -1,72 +1,46 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { WorksService } from '../Services/works-service.service';
+import { Component, computed, inject, signal } from '@angular/core';
+import { toSignal } from '@angular/core/rxjs-interop';
+import { catchError, of } from 'rxjs';
+import { TranslatePipe } from '../i18n/translate.pipe';
 import { Project } from '../interfaces/project.interface';
+import { WorksService } from '../Services/works-service.service';
+import { RevealDirective } from '../shared/reveal.directive';
+
+type StackFilter = 'backend' | 'frontend';
 
 @Component({
   selector: 'works',
+  imports: [RevealDirective, TranslatePipe],
   templateUrl: './works.component.html',
   styleUrls: ['./works.component.scss'],
 })
-export class WorksComponent implements OnInit {
-  @Input() isVisible: boolean = false;
-  displayedProjects: Project[] = [];
-  constructor(private _service: WorksService) {}
+export class WorksComponent {
+  private readonly service = inject(WorksService);
 
-  ngOnInit(): void {
-    this._service.getProjects().subscribe({
-      next: (data: any[]) => {
-        const filteredProjects = data.filter((project: any) => project);
-        this.displayedProjects = filteredProjects;
-      },
-      error: (error) => console.error('Error loading projects:', error)
-    });
-  }
+  readonly filters: { id: StackFilter; labelKey: string }[] = [
+    { id: 'backend', labelKey: 'works.filters.backend' },
+    { id: 'frontend', labelKey: 'works.filters.frontend' },
+  ];
 
-  getBackEndProjects(): void {
-    if (this.verifyStack('backend')) {
-      this.resetProjects();
-    } else {
-      this._service.getProjects().subscribe({
-        next: (data: any[]) => {
-          const filteredProjects = data.filter((project: any) =>
-            project.stacks.includes('backend')
-          );
-          this.displayedProjects = filteredProjects;
-        },
-        error: (error: Error) => console.error('Error loading backend projects:', error)
-      });
-    }
-  }
+  readonly activeFilter = signal<StackFilter | null>(null);
 
-  getFronEndProjects(): void {
-    if (this.verifyStack('frontend')) {
-      this.resetProjects();
-    } else {
-      this._service.getProjects().subscribe({
-        next: (data: any[]) => {
-          const filteredProjects = data.filter((project: any) =>
-            project.stacks.includes('frontend')
-          );
-          this.displayedProjects = filteredProjects;
-        },
-        error: (error: Error) => console.error('Error loading frontend projects:', error)
-      });
-    }
-  }
+  private readonly projects = toSignal(
+    this.service.getProjects().pipe(
+      catchError((error: Error) => {
+        console.error('Error loading projects:', error);
+        return of([] as Project[]);
+      }),
+    ),
+    { initialValue: [] as Project[] },
+  );
 
-  resetProjects(): void {
-    this._service.getProjects().subscribe({
-      next: (data: any[]) => {
-        this.displayedProjects = data;
-      },
-      error: (error: Error) => console.error('Error resetting projects:', error)
-    });
-  }
-  
-  verifyStack(stack: string): boolean {
-    let isActive = this.displayedProjects.every((project: any) =>
-      project.stacks.includes(stack)
-    );
-    return isActive ? true : false;
+  readonly displayedProjects = computed(() => {
+    const filter = this.activeFilter();
+    const all = this.projects();
+    return filter ? all.filter((project) => project.stacks.includes(filter)) : all;
+  });
+
+  toggleFilter(filter: StackFilter): void {
+    this.activeFilter.update((current) => (current === filter ? null : filter));
   }
 }

@@ -1,36 +1,44 @@
-<h1 style="color: #7ed957;">My Works</h1> 
-<div class="works">  
-    <div class="back">
-        <button
-        class="back-btn custom-btn"
-        (click)="getBackEndProjects()"
-        [ngClass]="{'custom-btn-animation' : isVisible == true}"
-        ><h2>Back-End</h2></button>
-    </div> 
-    <div class="front"> 
-        <button
-        class="front-btn custom-btn"
-        (click)="getFronEndProjects()"
-        [ngClass]="{'custom-btn-animation' : isVisible == true}"
-        ><h2>Front-End</h2></button>
-    </div> 
-    <div class="full-stack"> 
-        <button
-        class="full-btn custom-btn"
-        [ngClass]="{'custom-btn-animation' : isVisible == true}"
-        ><h2>Full-Stack</h2></button>
-    </div> 
-</div> 
-<div class="cards"> 
-    <div class="card" *ngFor="let card of displayedProjects" [ngClass]="{'card-animation' : isVisible == true}" style="width: 18rem;">
-        <img src="{{card.img}}" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">{{card.name}}</h5>
-          <p class="card-text">{{card.description}}</p>
-          <a href="{{card.link}}">Go to Project</a>
-          <div class="card-icons"> 
-              <img src="{{icon}}" alt="" *ngFor="let icon of card.icons">
+<section class="section container">
+  <div class="section-heading" appReveal>
+    <span class="eyebrow">{{ 'works.eyebrow' | translate }}</span>
+    <h2>{{ 'works.title' | translate }}</h2>
+  </div>
+
+  <div class="filters" role="group" [attr.aria-label]="'works.filterLabel' | translate" appReveal="100">
+    @for (filter of filters; track filter.id) {
+      <button
+        type="button"
+        class="filters__pill"
+        [class.filters__pill--active]="activeFilter() === filter.id"
+        [attr.aria-pressed]="activeFilter() === filter.id"
+        (click)="toggleFilter(filter.id)"
+      >
+        {{ filter.labelKey | translate }}
+      </button>
+    }
+  </div>
+
+  <div class="cards">
+    @for (card of displayedProjects(); track card.id) {
+      <article class="card glass" appReveal>
+        <div class="card__media">
+          <img [src]="card.img" [alt]="card.name + ' ' + ('works.preview' | translate)" loading="lazy" />
+        </div>
+        <div class="card__body">
+          <h3>{{ card.name }}</h3>
+          <p>{{ 'projects.' + card.id + '.description' | translate }}</p>
+          <div class="card__footer">
+            <div class="card__icons">
+              @for (icon of card.icons; track icon) {
+                <img [src]="icon" alt="" loading="lazy" />
+              }
+            </div>
+            <a class="card__link" [href]="card.link" target="_blank" rel="noopener">
+              {{ 'works.goToProject' | translate }} <i class="bi bi-arrow-up-right"></i>
+            </a>
           </div>
-        </div> 
-      </div>
-</div>
+        </div>
+      </article>
+    }
+  </div>
+</section>

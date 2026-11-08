@@ -1,8 +1,13 @@
-<div class="content"> 
-    <div class="tittle" [ngClass]="{'tittle-animation' : isVisible == true}"> 
-        <h1>Who I am and what I do</h1>
-    </div> 
-    <div class="paragraph" [ngClass]="{'paragraph-animation' : isVisible == true}"> 
-        <h1>My name is Everton. I'm a passionate beginner programmer dedicated to continuous learning and improvement.</h1>
-    </div>
-</div>
+<section class="section container">
+  <div class="section-heading" appReveal>
+    <span class="eyebrow">{{ 'about.eyebrow' | translate }}</span>
+    <h2>{{ 'about.title' | translate }}</h2>
+  </div>
+
+  <div class="about glass" appReveal="120">
+    <i class="bi bi-quote about__icon"></i>
+    <p>
+      {{ 'about.intro' | translate }} <strong class="gradient-text">Everton</strong>{{ 'about.rest' | translate }}
+    </p>
+  </div>
+</section>

@@ -1,31 +1,26 @@
-<div class="main">
-  <div class="tittle">
-    <h1 [ngClass]="{'h-animation' : isVisible == true}">Known technologies</h1>
+<section class="section container">
+  <div class="section-heading" appReveal>
+    <span class="eyebrow">{{ 'skills.eyebrow' | translate }}</span>
+    <h2>{{ 'skills.title' | translate }}</h2>
   </div>
-  <div class="content">
-    <div class="backend">
-      <h1 class="content-h1" [ngClass]="{'h-animation' : isVisible == true}">Back-end</h1>
-      <ul class="myList">
-        <li *ngFor="let data of backendData" [ngClass]="{'l-animation' : isVisible == true}">
-          <img src="{{ data.img }}" alt="" /> {{ data.name }} ({{ data.level }})
-        </li>
-      </ul>
-    </div>
-    <div class="frontend"> 
-      <h1 class="content-h1" [ngClass]="{'h-animation' : isVisible == true}">Front-end</h1>
-      <ul class="myList">
-        <li *ngFor="let data of frontendData"  [ngClass]="{'l-animation' : isVisible == true}">
-          <img src="{{ data.img }}" alt="" /> {{ data.name }} ({{ data.level }})
-        </li>
-      </ul>
-    </div>
-    <div class="utilitaries">
-      <h1 class="content-h1" [ngClass]="{'h-animation' : isVisible == true}">Utilitaries</h1>
-      <ul class="myList">
-        <li *ngFor="let data of utilitariesData" [ngClass]="{'l-animation' : isVisible == true}">
-          <img src="{{ data.img }}" alt="" /> {{ data.name }} ({{ data.level }})
-        </li>
-      </ul>
-    </div>
+
+  <div class="groups">
+    @for (group of groups(); track group.titleKey; let i = $index) {
+      <article class="group glass" [appReveal]="i * 120">
+        <h3><i [class]="'bi ' + group.icon"></i> {{ group.titleKey | translate }}</h3>
+        <ul>
+          @for (tech of group.items; track tech.name) {
+            <li>
+              @if (tech.img) {
+                <img [src]="tech.img" [alt]="tech.name" loading="lazy" />
+              } @else if (tech.icon) {
+                <i [class]="'bi tech-icon ' + tech.icon" aria-hidden="true"></i>
+              }
+              <span class="name">{{ tech.nameKey ? (tech.nameKey | translate) : tech.name }}</span>
+            </li>
+          }
+        </ul>
+      </article>
+    }
   </div>
-</div>
+</section>

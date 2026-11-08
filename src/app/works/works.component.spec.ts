@@ -1,21 +1,21 @@
+import { provideHttpClient } from '@angular/common/http';
+import { provideHttpClientTesting } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { WorksComponent } from './works.component';
 
 describe('WorksComponent', () => {
-  let component: WorksComponent;
   let fixture: ComponentFixture<WorksComponent>;
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({
-      declarations: [WorksComponent]
-    });
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [WorksComponent],
+      providers: [provideHttpClient(), provideHttpClientTesting()],
+    }).compileComponents();
     fixture = TestBed.createComponent(WorksComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+    await fixture.whenStable();
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    expect(fixture.componentInstance).toBeTruthy();
   });
 });

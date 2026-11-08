@@ -1,32 +1,30 @@
 [
   {
     "name": "Git",
-    "level": "basic",
     "img": "assets\\imgs\\git.png"
   },
   {
     "name": "GitHub",
-    "level": "basic",
     "img": "assets\\imgs\\github.png"
   },
   {
     "name": "GiLab",
-    "level": "basic",
     "img": "assets\\imgs\\gitlab.png"
   },
   {
     "name": "SQLServer",
-    "level": "basic",
     "img": "assets\\imgs\\sql-server.png"
   },
   {
     "name": "PostgreeSQL",
-    "level": "Intermediate",
     "img": "assets\\imgs\\postgree.png"
   },
   {
     "name": "PowerBI",
-    "level": "basic",
     "img": "assets\\imgs\\powerbi.png"
+  },
+  {
+    "name": "JasperReports",
+    "icon": "bi-file-earmark-bar-graph"
   }
 ]

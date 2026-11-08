@@ -1,7 +1,48 @@
-<div class="content">
-  <first-page [isVisible]="firstComponentVisibility" class="firstComponent"></first-page>
-  <who-i-am [isVisible]="secondComponentVisibility" class="secondComponent"></who-i-am>
-  <known-technologies [isVisible]="thirdComponentVisibility" class="thirdComponent"></known-technologies>
-  <works [isVisible]="fourthComponentVisibility" class="fourthComponent" id="fourthComponent"></works> 
-  <contact [isVisible]="fifthComponentVisibility" class="fifthComponent"></contact>
-</div>
+<header class="nav" [class.nav--scrolled]="scrolled()" [class.nav--open]="menuOpen()">
+  <div class="container nav__inner">
+    <a class="nav__brand" href="#home" (click)="closeMenu()" [attr.aria-label]="'nav.home' | translate">
+      <span class="nav__logo">EG</span>
+      <span class="nav__name">Everton Gonçalves</span>
+    </a>
+
+    <div class="nav__right">
+      <nav id="nav-links" class="nav__links" [attr.aria-label]="'nav.main' | translate">
+        @for (link of links; track link) {
+          <a [href]="'#' + link" (click)="closeMenu()">{{ 'nav.' + link | translate }}</a>
+        }
+      </nav>
+
+      <button
+        type="button"
+        class="nav__lang"
+        (click)="i18n.toggle()"
+        [attr.aria-label]="'nav.language' | translate"
+      >
+        <i class="bi bi-translate"></i>
+        <span [class.active]="i18n.lang() === 'en'">EN</span>
+        <span class="nav__lang-divider">/</span>
+        <span [class.active]="i18n.lang() === 'pt'">PT</span>
+      </button>
+
+      <button
+        type="button"
+        class="nav__toggle"
+        (click)="toggleMenu()"
+        [attr.aria-expanded]="menuOpen()"
+        aria-controls="nav-links"
+        [attr.aria-label]="'nav.menu' | translate"
+      >
+        <i class="bi" [class.bi-list]="!menuOpen()" [class.bi-x-lg]="menuOpen()"></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <first-page id="home"></first-page>
+  <who-i-am id="about"></who-i-am>
+  <experience id="experience"></experience>
+  <known-technologies id="technologies"></known-technologies>
+  <works id="works"></works>
+  <contact id="contact"></contact>
+</main>

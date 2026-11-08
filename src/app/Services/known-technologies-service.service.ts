@@ -1,23 +1,27 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs/internal/Observable';
+import { Injectable, inject } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Technology } from '../interfaces/technology.interface';
 
 @Injectable({
   providedIn: 'root'
 })
 export class KnownTechnologiesService {
+  private readonly http = inject(HttpClient);
 
-  constructor(private http: HttpClient) { } 
-   
-  getBackend(): Observable<any> { 
-    return this.http.get("assets/jsons/backend.json");
+  getBackend(): Observable<Technology[]> {
+    return this.http.get<Technology[]>('assets/jsons/backend.json');
   }
 
-  getFrontEnd(): Observable<any> { 
-    return this.http.get("assets/jsons/frontend.json");
+  getFrontEnd(): Observable<Technology[]> {
+    return this.http.get<Technology[]>('assets/jsons/frontend.json');
   }
-  
-  getUtilitaries(): Observable<any> { 
-    return this.http.get("assets/jsons/Utilitaries.json");
+
+  getAi(): Observable<Technology[]> {
+    return this.http.get<Technology[]>('assets/jsons/ai.json');
+  }
+
+  getUtilitaries(): Observable<Technology[]> {
+    return this.http.get<Technology[]>('assets/jsons/Utilitaries.json');
   }
 }
