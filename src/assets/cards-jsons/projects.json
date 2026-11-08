@@ -1,11 +1,130 @@
 [
   {
+    "id": "boardgame-hub",
+    "name": "BoardGame Hub",
+    "date": "2026-10",
+    "img": "assets\\jsons-imgs\\boardgame-hub.jpg",
+    "link": "https://github.com/CauaBertolini/BlueHawk_DesenvolvimentoWeb2_BCC_FURB_2026",
+    "stacks": [
+      "backend"
+    ],
+    "technologies": [
+      "Java",
+      "Spring Boot",
+      "PostgreSQL",
+      "Flyway",
+      "JWT"
+    ],
+    "icons": [
+      "assets\\imgs\\java.png",
+      "assets\\imgs\\spring.png",
+      "assets\\imgs\\postgree.png",
+      "assets\\imgs\\flyway.png",
+      "assets\\imgs\\jwt.png"
+    ]
+  },
+  {
+    "id": "media-manager",
+    "name": "MediaManager",
+    "date": "2025-11",
+    "img": "assets\\jsons-imgs\\media-manager.jpg",
+    "link": "https://github.com/EvertonMLGoncalves/GerenciadorDeAquivosDeMidia",
+    "stacks": [
+      "backend"
+    ],
+    "technologies": [
+      "Java",
+      "JUnit"
+    ],
+    "icons": [
+      "assets\\imgs\\java.png",
+      "assets\\imgs\\junit.png"
+    ]
+  },
+  {
+    "id": "my-portfolio",
+    "name": "My-Portifolio",
+    "date": "2024-01",
+    "img": "assets\\jsons-imgs\\portfolio.jpg",
+    "link": "https://github.com/EvertonMLGoncalves/portfolio",
+    "stacks": [
+      "frontend"
+    ],
+    "technologies": [
+      "Angular",
+      "TypeScript",
+      "HTML 5",
+      "CSS 3",
+      "Bootstrap"
+    ],
+    "icons": [
+      "assets\\imgs\\angular.png",
+      "assets\\imgs\\typescript.png",
+      "assets\\imgs\\html.png",
+      "assets\\imgs\\css.png",
+      "assets\\imgs\\bootstrap.png"
+    ]
+  },
+  {
+    "id": "crud-employee",
+    "name": "CRUD-Employee",
+    "date": "2024-01",
+    "img": "assets\\jsons-imgs\\employee.jpg",
+    "link": "https://github.com/EvertonMLGoncalves/CRUD-Employee",
+    "stacks": [
+      "frontend"
+    ],
+    "technologies": [
+      "Angular",
+      "TypeScript",
+      "HTML 5",
+      "CSS 3",
+      "Angular Material"
+    ],
+    "icons": [
+      "assets\\imgs\\angular.png",
+      "assets\\imgs\\typescript.png",
+      "assets\\imgs\\html.png",
+      "assets\\imgs\\css.png",
+      "assets\\imgs\\angular-material.png"
+    ]
+  },
+  {
+    "id": "green-back-end",
+    "name": "+GreenBack-End",
+    "date": "2023-10",
+    "img": "assets\\jsons-imgs\\+green.jpg",
+    "link": "https://github.com/TechTitans-MeioAmbiente/green/blob/main/BackEnd/back-end.md",
+    "stacks": [
+      "backend"
+    ],
+    "technologies": [
+      "C#",
+      "ASP.NET Core",
+      "Entity Framework Core",
+      "SQL Server"
+    ],
+    "icons": [
+      "assets\\imgs\\Csharp.png",
+      "assets\\imgs\\asp-net.png",
+      "assets\\imgs\\entity-framework.png",
+      "assets\\imgs\\sql-server.png"
+    ]
+  },
+  {
     "id": "clinic-api",
     "name": "ClinicAPI",
+    "date": "2023-09",
     "img": "assets\\jsons-imgs\\clinic.jpg",
     "link": "https://github.com/EvertonMLGoncalves/APIConsultorio",
     "stacks": [
       "backend"
+    ],
+    "technologies": [
+      "C#",
+      "ASP.NET Core",
+      "Entity Framework Core",
+      "SQL Server"
     ],
     "icons": [
       "assets\\imgs\\Csharp.png",
@@ -17,63 +136,23 @@
   {
     "id": "aliens-api",
     "name": "AliensAPI",
+    "date": "2023-09",
     "img": "assets\\jsons-imgs\\aliens.jpg",
     "link": "https://github.com/EvertonMLGoncalves/Aliens_API",
     "stacks": [
       "backend"
     ],
-    "icons": [
-      "assets\\imgs\\Csharp.png",
-      "assets\\imgs\\asp-net.png",
-      "assets\\imgs\\entity-framework.png",
-      "assets\\imgs\\sql-server.png"
-    ]
-  },
-  {
-    "id": "green-back-end",
-    "name": "+GreenBack-End",
-    "img": "assets\\jsons-imgs\\+green.jpg",
-    "link": "https://github.com/TechTitans-MeioAmbiente/green/blob/main/BackEnd/back-end.md",
-    "stacks": [
-      "backend"
+    "technologies": [
+      "C#",
+      "ASP.NET Core",
+      "Entity Framework Core",
+      "SQL Server"
     ],
     "icons": [
       "assets\\imgs\\Csharp.png",
       "assets\\imgs\\asp-net.png",
       "assets\\imgs\\entity-framework.png",
       "assets\\imgs\\sql-server.png"
-    ]
-  },
-  {
-    "id": "crud-employee",
-    "name": "CRUD-Employee",
-    "img": "assets\\jsons-imgs\\employee.jpg",
-    "link": "https://github.com/EvertonMLGoncalves/CRUD-Employee",
-    "stacks": [
-      "frontend"
-    ],
-    "icons": [
-      "assets\\imgs\\angular.png",
-      "assets\\imgs\\typescript.png",
-      "assets\\imgs\\html.png",
-      "assets\\imgs\\css.png",
-      "assets\\imgs\\angular-material.png"
-    ]
-  },
-  {
-    "id": "my-portfolio",
-    "name": "My-Portifolio",
-    "img": "assets\\jsons-imgs\\portfolio.jpg",
-    "link": "https://github.com/EvertonMLGoncalves/portfolio",
-    "stacks": [
-      "frontend"
-    ],
-    "icons": [
-      "assets\\imgs\\angular.png",
-      "assets\\imgs\\typescript.png",
-      "assets\\imgs\\html.png",
-      "assets\\imgs\\css.png",
-      "assets\\imgs\\bootstrap.png"
     ]
   }
 ]

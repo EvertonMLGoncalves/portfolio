@@ -82,6 +82,15 @@
     "eyebrow": "Portfólio",
     "title": "Meus Projetos",
     "filterLabel": "Filtrar projetos por stack",
+    "searchPlaceholder": "Buscar projeto ou tecnologia...",
+    "allStacks": "Todos",
+    "allTechs": "Todas as tecnologias",
+    "allYears": "Todos os anos",
+    "sortNewest": "Mais recentes",
+    "sortOldest": "Mais antigos",
+    "sortName": "Nome (A-Z)",
+    "clearFilters": "Limpar filtros",
+    "noResults": "Nenhum projeto encontrado com os filtros selecionados.",
     "filters": {
       "backend": "Back-End",
       "frontend": "Front-End"
@@ -104,6 +113,12 @@
     },
     "my-portfolio": {
       "description": "O código completo desta aplicação web, criada com Angular."
+    },
+    "media-manager": {
+      "description": "Aplicação desktop em Java Swing para gerenciar arquivos de mídia (filmes, músicas e livros), com arquitetura MVC e extração automática de metadados."
+    },
+    "boardgame-hub": {
+      "description": "API REST em Spring Boot para gerenciamento de coleções e marketplace de jogos de tabuleiro, com autenticação JWT, PostgreSQL e migrations com Flyway."
     }
   },
   "contact": {

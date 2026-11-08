@@ -4,41 +4,114 @@
     <h2>{{ 'works.title' | translate }}</h2>
   </div>
 
-  <div class="filters" role="group" [attr.aria-label]="'works.filterLabel' | translate" appReveal="100">
-    @for (filter of filters; track filter.id) {
+  <div class="toolbar" appReveal="100">
+    <div class="filters" role="group" [attr.aria-label]="'works.filterLabel' | translate">
       <button
         type="button"
         class="filters__pill"
-        [class.filters__pill--active]="activeFilter() === filter.id"
-        [attr.aria-pressed]="activeFilter() === filter.id"
-        (click)="toggleFilter(filter.id)"
+        [class.filters__pill--active]="activeStack() === null"
+        [attr.aria-pressed]="activeStack() === null"
+        (click)="setStack(null)"
       >
-        {{ filter.labelKey | translate }}
+        {{ 'works.allStacks' | translate }}
       </button>
-    }
+      @for (filter of filters; track filter.id) {
+        <button
+          type="button"
+          class="filters__pill"
+          [class.filters__pill--active]="activeStack() === filter.id"
+          [attr.aria-pressed]="activeStack() === filter.id"
+          (click)="setStack(filter.id)"
+        >
+          {{ filter.labelKey | translate }}
+        </button>
+      }
+    </div>
+
+    <div class="controls">
+      <div class="control control--search">
+        <i class="bi bi-search"></i>
+        <input
+          type="search"
+          [value]="searchQuery()"
+          [placeholder]="'works.searchPlaceholder' | translate"
+          (input)="onSearchInput($event)"
+        />
+      </div>
+
+      <div class="control">
+        <i class="bi bi-cpu"></i>
+        <select [value]="activeTech()" (change)="onTechChange($event)">
+          <option value="">{{ 'works.allTechs' | translate }}</option>
+          @for (tech of availableTechnologies(); track tech) {
+            <option [value]="tech">{{ tech }}</option>
+          }
+        </select>
+      </div>
+
+      <div class="control">
+        <i class="bi bi-calendar3"></i>
+        <select [value]="activeYear()" (change)="onYearChange($event)">
+          <option value="">{{ 'works.allYears' | translate }}</option>
+          @for (year of availableYears(); track year) {
+            <option [value]="year">{{ year }}</option>
+          }
+        </select>
+      </div>
+
+      <div class="control">
+        <i class="bi bi-sort-down"></i>
+        <select [value]="sortBy()" (change)="onSortChange($event)">
+          <option value="newest">{{ 'works.sortNewest' | translate }}</option>
+          <option value="oldest">{{ 'works.sortOldest' | translate }}</option>
+          <option value="name">{{ 'works.sortName' | translate }}</option>
+        </select>
+      </div>
+
+      @if (hasActiveFilters()) {
+        <button type="button" class="clear-btn" (click)="clearFilters()">
+          <i class="bi bi-x-lg"></i>
+          {{ 'works.clearFilters' | translate }}
+        </button>
+      }
+    </div>
   </div>
 
-  <div class="cards">
-    @for (card of displayedProjects(); track card.id) {
-      <article class="card glass" appReveal>
-        <div class="card__media">
-          <img [src]="card.img" [alt]="card.name + ' ' + ('works.preview' | translate)" loading="lazy" />
-        </div>
-        <div class="card__body">
-          <h3>{{ card.name }}</h3>
-          <p>{{ 'projects.' + card.id + '.description' | translate }}</p>
-          <div class="card__footer">
-            <div class="card__icons">
-              @for (icon of card.icons; track icon) {
-                <img [src]="icon" alt="" loading="lazy" />
+  @if (displayedProjects().length) {
+    <div class="cards">
+      @for (card of displayedProjects(); track card.id) {
+        <article class="card glass">
+          <div class="card__media">
+            <img [src]="card.img" [alt]="card.name + ' ' + ('works.preview' | translate)" loading="lazy" />
+          </div>
+          <div class="card__body">
+            <div class="card__header">
+              <h3>{{ card.name }}</h3>
+              @if (card.date) {
+                <span class="card__date">{{ formatDate(card.date) }}</span>
               }
             </div>
-            <a class="card__link" [href]="card.link" target="_blank" rel="noopener">
-              {{ 'works.goToProject' | translate }} <i class="bi bi-arrow-up-right"></i>
-            </a>
+            <p>{{ 'projects.' + card.id + '.description' | translate }}</p>
+            <div class="card__footer">
+              <div class="card__icons">
+                @for (icon of card.icons; track icon; let i = $index) {
+                  <img [src]="icon" [alt]="card.technologies[i] || ''" [title]="card.technologies[i] || ''" loading="lazy" />
+                }
+              </div>
+              <a class="card__link" [href]="card.link" target="_blank" rel="noopener">
+                {{ 'works.goToProject' | translate }} <i class="bi bi-arrow-up-right"></i>
+              </a>
+            </div>
           </div>
-        </div>
-      </article>
-    }
-  </div>
+        </article>
+      }
+    </div>
+  } @else {
+    <div class="empty glass">
+      <p>{{ 'works.noResults' | translate }}</p>
+      <button type="button" class="filters__pill filters__pill--active" (click)="clearFilters()">
+        {{ 'works.clearFilters' | translate }}
+      </button>
+    </div>
+  }
 </section>
